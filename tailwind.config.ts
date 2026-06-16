@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        alabaster: "rgb(var(--color-alabaster) / <alpha-value>)",
+        obsidian: "rgb(var(--color-obsidian) / <alpha-value>)",
+        umber: "rgb(var(--color-umber) / <alpha-value>)",
+        crimson: "rgb(var(--color-crimson) / <alpha-value>)",
+      },
+      fontFamily: {
+        cormorant: ["var(--font-cormorant)", "serif"],
+        manrope: ["var(--font-manrope)", "sans-serif"],
       },
     },
   },

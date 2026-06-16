@@ -2,22 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-alabaster: 244 242 237;
+    --color-obsidian: 26 26 26;
+    --color-umber: 58 50 44;
+    --color-crimson: 163 59 59;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  * {
+    cursor: none;
+  }
+
+  @media (hover: none) {
+    * {
+      cursor: auto;
+    }
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-alabaster text-obsidian antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-crimson/20 text-obsidian;
+  }
 }
 
 @layer utilities {
